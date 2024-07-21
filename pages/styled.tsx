@@ -32,3 +32,7 @@ export const HeaderOffset = styled('div')`
     ...theme.mixins.toolbar,
   })};
 `;
+
+export default function Nothing() {
+  return <>{/* nothing */}</>;
+}

@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
 import LightDarkButton from "@/components/light-dark-button";
 import Image from "next/image";
-import PrototypeImg from "../public/prototype.png";
+import PrototypeLightImg from "../public/prototype-light.png";
+import PrototypeDarkImg from "../public/prototype-dark.png";
 import { useState } from "react";
 import { AppBar, HeaderOffset, Logo, Toolbar } from "./styled";
 
@@ -14,7 +15,7 @@ export default function Home() {
 
     return (
         <main
-            className={`flex min-h-screen flex-col items-center justify-evenly px-24 ${inter.className}`}
+            className={`flex min-h-screen flex-col items-center justify-evenly p-24 pt-0 ${inter.className}`}
         >
             <LightDarkButton onThemeChange={(theme) => {setTheme(theme)}}/>
 
@@ -62,15 +63,20 @@ export default function Home() {
                             Roof tiles that sync to the outside temperature, so you can be comfortable in your home.
                         </h2>
                     </div>
-                    <div className={`rounded-xl animate-float ${theme == "dark" ? "drop-shadow-[0_0_10rem_rgba(255,255,255,1)]" : ""}`}>
-                        <Image src={PrototypeImg} alt="prototype" width={700} height={350} className=""/>
+                    <div className={`select-none rounded-xl animate-float ${theme == "dark" ? "drop-shadow-[0_0_10rem_rgba(255,255,255,1)]" : ""}`}>
+                        {
+                        theme == "light" ?
+                            <Image src={PrototypeLightImg} alt="prototype" width={700} height={350} className="" />
+                        :
+                            <Image src={PrototypeDarkImg} alt="prototype" width={700} height={350} className="" />
+                        }
                     </div>
                 </div>
 
                 <div className="absolute bottom-16 w-full animate-bounce">
                     <div className="w-full flex justify-center">
-                        <a href="">
-                            <button className="text-xl p-2 px-4 text-foreground bg-foreground-50 rounded-full font-bold">
+                        <a href="#about">
+                            <button className="text-xl p-2 px-4 text-foreground bg-foreground-20 rounded-full font-bold">
                                 V
                             </button>
                         </a>
@@ -80,9 +86,9 @@ export default function Home() {
 
             <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
                 <a
-                    href=""
+                    href="#"
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target="_blank"
+                    target=""
                     rel="noopener noreferrer"
                 >
                     <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -97,9 +103,9 @@ export default function Home() {
                 </a>
 
                 <a
-                    href=""
+                    href="#"
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target="_blank"
+                    target=""
                     rel="noopener noreferrer"
                 >
                     <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -114,9 +120,9 @@ export default function Home() {
                 </a>
 
                 <a
-                    href=""
+                    href="#"
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target="_blank"
+                    target=""
                     rel="noopener noreferrer"
                 >
                     <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -133,7 +139,7 @@ export default function Home() {
                 <a
                     href=""
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target="_blank"
+                    target=""
                     rel="noopener noreferrer"
                 >
                 <h2 className={`mb-3 text-2xl font-semibold`}>

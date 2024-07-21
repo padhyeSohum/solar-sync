@@ -21,6 +21,12 @@ body {
   background-color: var(--background-hex);
   transition: all;
   transition-duration: 250ms;
+  scroll-behavior: smooth;
+}
+
+::selection {
+    color: var(--background-hex);
+    background-color: rgba(var(--foreground-rgb), 0.9);
 }
 
 @layer utilities {

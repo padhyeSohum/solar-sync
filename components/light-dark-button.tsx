@@ -1,4 +1,5 @@
 import useTheme from "@/hooks/use-theme";
+import { useEffect } from "react";
 
 type Theme = "light" | "dark";
 
@@ -14,6 +15,11 @@ export default function LightDarkButton({ onThemeChange }: ButtonProps) {
         setTheme(newTheme);
         onThemeChange(newTheme);
     }
+
+    useEffect(() => {
+        setTheme("light");
+        onThemeChange("light");
+    }, [])
 
     return (
         <div className="fixed top-4 right-4 rounded-lg text-xl z-10">

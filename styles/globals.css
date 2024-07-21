@@ -5,8 +5,8 @@
 :root {
   --foreground-hex: #191919;
   --foreground-rgb: 25, 25, 25;
-  --background-hex: #D6DBDC;
-  --background-rgb: 214, 219, 220;
+  --background-hex: #dfe3ec;
+  --background-rgb: 223, 227, 236;
 }
 
 [data-theme="dark"] {
@@ -22,18 +22,6 @@ body {
   transition: all;
   transition-duration: 250ms;
 }
-
-h1 {
-    font-size: 5rem;
-}
-
-/* .foreground-20 {
-    background-color: rgba(var(--foreground-rgb), 0.2);
-}
-
-.background-20 {
-    background-color: rgba(var(--background-rgb), 0.2);
-} */
 
 @layer utilities {
   .text-balance {

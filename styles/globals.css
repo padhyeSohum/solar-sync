@@ -40,3 +40,10 @@ h1 {
     text-wrap: balance;
   }
 }
+
+.gradient-underline {
+  background-image: linear-gradient(to right, lime, lightblue, blue);
+  background-size: 100% 2px; 
+  background-repeat: no-repeat;
+  background-position: bottom;    
+}

@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --foreground-hex: #191919;
-  --foreground-rgb: 25, 25, 25;
-  --background-hex: #dfe3ec;
-  --background-rgb: 223, 227, 236;
+    --foreground-hex: #191919;
+    --foreground-rgb: 25, 25, 25;
+    --background-hex: #DFE3EC;
+    --background-rgb: 223, 227, 236;
+    --gradient-start: #FF0000;
+    --gradient-end: #FF9D00;
 }
 
 [data-theme="dark"] {
@@ -14,14 +16,16 @@
     --foreground-rgb: 214, 219, 220;
     --background-hex: #191919;
     --background-rgb: 25, 25, 25;
+    --gradient-start: #00FF00;
+    --gradient-end: #0000FF;
 }
 
 body {
-  color: var(--foreground-hex);
-  background-color: var(--background-hex);
-  transition: all;
-  transition-duration: 250ms;
-  scroll-behavior: smooth;
+    color: var(--foreground-hex);
+    background-color: var(--background-hex);
+    transition: all;
+    transition-duration: 250ms;
+    scroll-behavior: smooth;
 }
 
 ::selection {
@@ -30,14 +34,15 @@ body {
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 
 .gradient-underline {
-  background-image: linear-gradient(to right, lime, lightblue, blue);
-  background-size: 100% 2px; 
-  background-repeat: no-repeat;
-  background-position: bottom;    
+    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    background-size: 100% 2px; 
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: all ease-in-out;
 }

@@ -17,8 +17,8 @@ export default function LightDarkButton({ onThemeChange }: ButtonProps) {
     }
 
     useEffect(() => {
-        setTheme("light");
-        onThemeChange("light");
+        setTheme("dark");
+        onThemeChange("dark");
     }, [])
 
     return (

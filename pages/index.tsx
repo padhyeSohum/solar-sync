@@ -5,6 +5,7 @@ import PrototypeLightImg from "../public/prototype-light.png";
 import PrototypeDarkImg from "../public/prototype-dark.png";
 import { useState } from "react";
 import { AppBar, HeaderOffset, Logo, Toolbar } from "./styled";
+import Typewriter from "typewriter-effect";
 
 const inter = Inter({ subsets: ["latin"] });
 type Theme = "light" | "dark";
@@ -57,10 +58,25 @@ export default function Home() {
                 <div className="flex flex-row place-items-center justify-between">
                     <div className="w-2/3 font-bold">
                         <h1 className="text-balance mb-8 text-[3.5rem]">
-                            Worrying about your house temperature, so you don&apos;t have to.
+                            Roof tiles that are<br/>
+                            <span className="inline-block gradient-underline">
+                                <Typewriter
+                                    options={{
+                                        strings: [
+                                            "adaptive.",
+                                            "reliable.",
+                                            "cost-effective.",
+                                            "robust.",
+                                            ""
+                                        ],
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                />
+                            </span>
                         </h1>
-                        <h2 className="w-5/6 text-3xl leading-[150%]">
-                            Roof tiles that sync to the outside temperature, so you can be comfortable in your home.
+                        <h2 className="w-5/6 text-2xl leading-[150%]">
+                            Roof tiles that adapt to the outside temperature, allowing you to stay comfortable in your home without the need for AC.
                         </h2>
                     </div>
                     <div className={`select-none rounded-xl animate-float ${theme == "dark" ? "drop-shadow-[0_0_10rem_rgba(255,255,255,1)]" : ""}`}>

@@ -16,7 +16,7 @@ export default function LightDarkButton({ onThemeChange }: ButtonProps) {
     }
 
     return (
-        <div className="fixed top-4 right-4 rounded-lg text-xl">
+        <div className="fixed top-4 right-4 rounded-lg text-xl z-10">
             <button 
                 className="p-4 rounded-l-lg border-2 border-foreground-20 border-r-[1px] hover:bg-foreground-20 transition-all duration-500"
                 onClick={() => handleChange("light")}

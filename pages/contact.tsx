@@ -13,7 +13,11 @@ export default function Contacts() {
         <main
         className={`flex min-h-screen flex-col items-center justify-evenly p-24 pt-0 ${inter.className}`}
         >
-            <LightDarkButton onThemeChange={setTheme} />
+
+            {/* NAVBAR */}
+            <div className="w-full absolute top-0 flex justify-evenly z-10 place-items-center py-8">
+                <LightDarkButton onThemeChange={(theme) => { setTheme(theme) }} />
+            </div>
             <div className="w-full h-screen flex flex-col justify-center relative">
             <h1 className="text-balance mb-8 text-[3.5rem]">Consulting</h1>
 

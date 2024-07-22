@@ -20,7 +20,25 @@ export default function About() {
             <LightDarkButton onThemeChange={setTheme} />
 
             <div className="w-full h-screen flex flex-col justify-center relative">
-                placeholder
+                <h1>About</h1>
+
+                <h2>Synopsis</h2>
+                <p>In Canada, due to most roofs being black, they absorb heat from the sun in summer, greatly increasing air conditioning costs. <br/>
+                Therefore, Solar Sync develops a system that is cost-effective, reliable, and adaptive.
+                </p>
+
+                <h2>Product</h2>
+                <p>
+                    Solar Sync is a cost-effective, reliable, and adaptive roof tile system. It utilizes tungsten-doped vanadium dioxide to best utilize the best of both white and black coloured roofs.
+                    <br/>
+                    The vanadium dioxide film on the roof tiles is designed to change its colour under certain temperatures.
+                    <br/>
+                    By treating it with variable amounts of tungsten, we can change the temperature at which the roof tiles will change its spectral properties. 
+                    <br/>
+                    These roof tiles work just like regular roof tiles, and can be installed directly onto roofs.
+                </p>
+
+                <h2></h2>
             </div>
 
         </main>

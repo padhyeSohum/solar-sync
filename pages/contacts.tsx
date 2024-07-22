@@ -15,16 +15,12 @@ export default function Contacts() {
         >
             <LightDarkButton onThemeChange={setTheme} />
             <div className="w-full h-screen flex flex-col justify-center relative">
-            <h1 className="text-balance mb-8 text-[3.5rem]">Contacts</h1>
+            <h1 className="text-balance mb-8 text-[3.5rem]">Consulting</h1>
 
             <h2 className="w-5/6 text-2xl leading-[150%]">Questions?</h2>
 
             <h2 className="w-5/6 text-2xl leading-[150%]">Email</h2>
             <h3 className="w-5/6 text-2xl leading-[150%]"><a className="text-blue-500" href= "mailto: solar.sync.team@gmail.com">solar.sync.team@gmail.com</a></h3>
-
-            <h2 className="w-5/6 text-2xl leading-[150%]">Phone</h2>
-
-            <h2 className="w-5/6 text-2xl leading-[150%]">Hours</h2>
             </div>
         </main>
     );

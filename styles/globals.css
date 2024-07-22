@@ -5,8 +5,8 @@
 :root {
     --foreground-hex: #191919;
     --foreground-rgb: 25, 25, 25;
-    --background-hex: #DFE3EC;
-    --background-rgb: 223, 227, 236;
+    --background-hex: #ECE7DF;
+    --background-rgb: 236, 231, 223;
     --gradient-start: #FF0000;
     --gradient-end: #FF9D00;
 }

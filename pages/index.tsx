@@ -4,9 +4,8 @@ import PrototypeLightImg from "../public/prototype-light.png";
 import PrototypeDarkImg from "../public/prototype-dark.png";
 import { useState } from "react";
 import Typewriter from "typewriter-effect";
-import LightDarkButton from "@/components/light-dark-button";
-import Logo from "../public/logo.png";
 import Link from "next/link";
+import Navbar from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 type Theme = "light" | "dark";
@@ -14,33 +13,12 @@ type Theme = "light" | "dark";
 export default function Home() {
     const [theme, setTheme] = useState<Theme>();
 
-    const links = [
-        {
-            name: "Team",
-            link: "/team",
-        },
-        {
-            name: "FAQ",
-            link: "/faq",
-        },
-        {
-            name: "Contact Us",
-            link: "/contact",
-        },
-    ]
-
     return (
         <main
             className={`flex min-h-screen flex-col items-center justify-evenly p-24 pt-0 ${inter.className}`}
         >
             {/* NAVBAR */}
-            <div className="w-full absolute top-0 flex justify-evenly z-10 place-items-center py-8">
-                <Link href="/"><Image src={Logo} alt="Logo" width={100} className="drop-shadow-[0_0_2rem_rgba(82,132,67,0.5)] hover:drop-shadow-[0_0_2rem_rgba(82,132,67,1)] transition-all" /></Link>
-                {links.map((data, i) => (
-                    <Link key={i} href={data.link} className="font-bold text-md transition-all ease-in-out duration-300 hover:bg-foreground-80 hover:text-background p-4 rounded-lg"><div>{data.name}</div></Link>
-                ))}
-                <LightDarkButton onThemeChange={(theme) => { setTheme(theme) }} />
-            </div>
+            <Navbar onThemeChange={(newTheme) => {setTheme(newTheme)}}/>
             
             {/* HERO SECTION */}
             <div className="w-full h-screen flex flex-col justify-center relative">
@@ -81,7 +59,7 @@ export default function Home() {
                 <div className="absolute bottom-16 w-full animate-bounce">
                     <div className="w-full flex justify-center">
                         <Link href="#about">
-                            <button className="text-xl p-2 px-4 text-foreground bg-foreground-20 rounded-full font-bold">
+                            <button className="text-xl p-2 px-4 text-foreground bg-foreground-20 rounded-full font-bold select-none">
                                 V
                             </button>
                         </Link>
@@ -103,8 +81,7 @@ export default function Home() {
                     <div className="bg-foreground-20 rounded-xl p-8 text-pretty">
                         <h2 className="text-[2rem] font-bold">Product</h2>
                         <p>
-                            Solar Sync develops a system that is cost-effective, reliable, and adaptive.
-        Solar Sync is a cost-effective, reliable, and adaptive roof tile system. It utilizes tungsten-doped vanadium dioxide to best utilize the best of both white and black coloured roofs.
+                            Solar Sync is a cost-effective, reliable, and adaptive roof tile system. It utilizes tungsten-doped vanadium dioxide to best utilize the best of both white and black coloured roofs.
                             The vanadium dioxide film on the roof tiles is designed to change its colour under certain temperatures.
                             By treating it with variable amounts of tungsten, we can change the temperature at which the roof tiles will change its spectral properties.
                             These roof tiles work just like regular roof tiles, and can be installed directly onto roofs.

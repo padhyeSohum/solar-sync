@@ -87,6 +87,32 @@ export default function Home() {
                             These roof tiles work just like regular roof tiles, and can be installed directly onto roofs.
                         </p>
                     </div>
+
+                    <div className="bg-foreground-20 rounded-xl p-8 text-pretty">
+                        <h2 className="text-[2rem] font-bold">Benefits</h2>
+                            <ul className="list-disc" style={{ listStyleType: "disc" }}>
+                                <li>
+                                    <span className="font-bold">Cost-Effective</span>
+                                    <br/>
+                                    The raw materials used for the roof tiles are very affordable.    
+                                </li>
+                                <li>
+                                    <span className="font-bold">Reliable</span>
+                                    <br/>
+                                    Solar Sync prides itself on using durable materials while keeping our products affordable. It is modular and as easy to install as any other roof tile.
+                                </li>
+                                <li>
+                                    <span className="font-bold">Adaptive</span>
+                                    <br/>
+                                    Solar Sync adapts to all climate conditions by providing a customized roof tile system. The vanadium dioxide can be treated to adjust its properties in different temperatures.    
+                                </li>
+                                <li>
+                                    <span className="font-bold">Available</span>
+                                    <br/>
+                                    Solar Sync can be quickly shipped to customers. It is durable and modular, allowing it to be transported with ease.
+                                </li>
+                            </ul>
+                    </div>
                 </div>
             </div>
         </main>

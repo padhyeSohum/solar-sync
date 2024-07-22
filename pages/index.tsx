@@ -1,10 +1,10 @@
 import { Inter } from "next/font/google";
-import LightDarkButton from "@/components/light-dark-button";
 import Image from "next/image";
 import PrototypeLightImg from "../public/prototype-light.png";
 import PrototypeDarkImg from "../public/prototype-dark.png";
 import { useState } from "react";
 import Typewriter from "typewriter-effect";
+import LightDarkButton from "@/components/light-dark-button";
 import Logo from "../public/logo.png";
 import Link from "next/link";
 
@@ -89,57 +89,40 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
-                <Link
-                    href="#"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target=""
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        The Team{" "}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Meet our team of entrepreneurs and their grand vision of this project.
-                    </p>
-                </Link>
+            {/* ABOUT SECTION */}
+            <div id="about" className="w-full h-screen flex flex-col justify-center relative">
+                <div className="flex flex-row place-items-center justify-between">
+                    <div className="w-2/3 font-bold">
+                        <h1 className="text-balance mb-8 text-[3.5rem]">
+                            What is<br/>
+                            <span className="inline-block gradient-underline">
+                                Solar Sync?
+                            </span>
+                        </h1>
+                        <h2 className="w-5/6 text-2xl leading-[150%]">
+                            Solar Sync is a roof tile that adapts to the outside temperature, allowing you to stay comfortable in your home without the need for AC.
+                        </h2>
 
-                <Link
-                    href="#"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target=""
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        FAQ{" "}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                        -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Explore the most frequently asked questions.
-                    </p>
-                </Link>
+                    </div>
+                    <div className={`select-none rounded-xl animate-float ${theme == "dark" ? "drop-shadow-[0_0_10rem_rgba(255,255,255,1)]" : ""}`}>
+                        {
+                        theme == "light" ?
+                            <Image src={PrototypeLightImg} alt="prototype" width={700} height={350} className="" />
+                        :
+                            <Image src={PrototypeDarkImg} alt="prototype" width={700} height={350} className="" />
+                        }
+                    </div>
+                </div>
 
-                <Link
-                    href="#"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target=""
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Contact Us{" "}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-                        Interested? Get in touch!
-                    </p>
-                </Link>
+                <div className="absolute bottom-16 w-full animate-bounce">
+                    <div className="w-full flex justify-center">
+                        <Link href="#contact">
+                            <button className="text-xl p-2 px-4 text-foreground bg-foreground-20 rounded-full font-bold">
+                                C
+                            </button>
+                        </Link>
+                    </div>
+                </div>
             </div>
         </main>
     );

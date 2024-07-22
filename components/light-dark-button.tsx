@@ -1,5 +1,6 @@
 import useTheme from "@/hooks/use-theme";
 import { useEffect } from "react";
+import { FaSun, FaSnowflake } from "react-icons/fa";
 
 type Theme = "light" | "dark";
 
@@ -22,18 +23,18 @@ export default function LightDarkButton({ onThemeChange }: ButtonProps) {
     }, [])
 
     return (
-        <div className="fixed top-4 right-4 rounded-lg text-xl z-10">
+        <div className="rounded-lg text-xl">
             <button 
-                className="p-4 rounded-l-lg border-2 border-foreground-20 border-r-[1px] hover:bg-foreground-20 transition-all duration-500"
+                className="p-4 rounded-l-lg border-2 border-foreground-20 border-r-[1px] hover:bg-foreground-20 transition-all duration-500 text-red-300"
                 onClick={() => handleChange("light")}
             >
-                🔥
+                <FaSun />
             </button>
             <button
-                className="p-4 rounded-r-lg border-2 border-foreground-20 border-l-[1px] hover:bg-foreground-20 transition-all duration-500"
+                className="p-4 rounded-r-lg border-2 border-foreground-20 border-l-[1px] hover:bg-foreground-20 transition-all duration-500 text-blue-400"
                 onClick={() => handleChange("dark")}
             >
-                🧊
+                <FaSnowflake />
             </button>
         </div>
     );

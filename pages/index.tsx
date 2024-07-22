@@ -70,7 +70,7 @@ export default function Home() {
             {/* ABOUT SECTION */}
             <div id="about" className="w-full flex flex-col justify-center place-items-center relative">
                 <h1 className="text-[3rem] font-bold mb-8">About</h1>
-                <div className="w-full grid grid-cols-2 gap-8">
+                <div className="w-full grid grid-cols-3 gap-8">
                     <div className="bg-foreground-20 rounded-xl p-8 text-pretty">
                         <h2 className="text-[2rem] font-bold">Objective</h2>
                         <p>

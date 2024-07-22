@@ -25,7 +25,7 @@ export default function Home() {
         },
         {
             name: "Contact Us",
-            link: "/contact-us",
+            link: "/contact",
         },
     ]
 
@@ -90,37 +90,25 @@ export default function Home() {
             </div>
 
             {/* ABOUT SECTION */}
-            <div id="about" className="w-full h-screen flex flex-col justify-center relative">
-                <div className="flex flex-row place-items-center justify-between">
-                    <div className="w-2/3 font-bold">
-                        <h1 className="text-balance mb-8 text-[3.5rem]">
-                            What is<br/>
-                            <span className="inline-block gradient-underline">
-                                Solar Sync?
-                            </span>
-                        </h1>
-                        <h2 className="w-5/6 text-2xl leading-[150%]">
-                            Solar Sync is a roof tile that adapts to the outside temperature, allowing you to stay comfortable in your home without the need for AC.
-                        </h2>
-
+            <div id="about" className="w-full flex flex-col justify-center place-items-center relative">
+                <h1 className="text-[3rem] font-bold mb-8">About</h1>
+                <div className="w-full grid grid-cols-2 gap-8">
+                    <div className="bg-foreground-20 rounded-xl p-8 text-pretty">
+                        <h2 className="text-[2rem] font-bold">Objective</h2>
+                        <p>
+                            In Canada, most roofs are dark-coloured. While being useful by absoring heat in the winter, they absorb excess heat from the sun in summer, greatly increasing air conditioning costs to bring the temperature back down.<br/><br/> <span className="font-bold">There is a growing need in Canada to have dynamic roofs that can adapt to all climates and environments.</span>
+                        </p>
                     </div>
-                    <div className={`select-none rounded-xl animate-float ${theme == "dark" ? "drop-shadow-[0_0_10rem_rgba(255,255,255,1)]" : ""}`}>
-                        {
-                        theme == "light" ?
-                            <Image src={PrototypeLightImg} alt="prototype" width={700} height={350} className="" />
-                        :
-                            <Image src={PrototypeDarkImg} alt="prototype" width={700} height={350} className="" />
-                        }
-                    </div>
-                </div>
 
-                <div className="absolute bottom-16 w-full animate-bounce">
-                    <div className="w-full flex justify-center">
-                        <Link href="#contact">
-                            <button className="text-xl p-2 px-4 text-foreground bg-foreground-20 rounded-full font-bold">
-                                C
-                            </button>
-                        </Link>
+                    <div className="bg-foreground-20 rounded-xl p-8 text-pretty">
+                        <h2 className="text-[2rem] font-bold">Product</h2>
+                        <p>
+                            Solar Sync develops a system that is cost-effective, reliable, and adaptive.
+        Solar Sync is a cost-effective, reliable, and adaptive roof tile system. It utilizes tungsten-doped vanadium dioxide to best utilize the best of both white and black coloured roofs.
+                            The vanadium dioxide film on the roof tiles is designed to change its colour under certain temperatures.
+                            By treating it with variable amounts of tungsten, we can change the temperature at which the roof tiles will change its spectral properties.
+                            These roof tiles work just like regular roof tiles, and can be installed directly onto roofs.
+                        </p>
                     </div>
                 </div>
             </div>
